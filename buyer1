@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tags básicos para el correcto funcionamiento en dispositivos móviles y SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAP Investor - Genera Ingresos Extra</title>
+    
+    <!-- Importamos Tailwind CSS a través de CDN. 
+         ¿Por qué? Es la forma más sencilla de tener estilos modernos, responsivos 
+         y premium sin crear archivos CSS externos complejos. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración personalizada de colores para Tailwind basada en la marca -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A', // Azul: Transmite confianza, seguridad y profesionalismo
+                            green: '#10B981', // Verde: Crecimiento, dinero, ingresos y acción (WhatsApp)
+                            gray: '#F3F4F6',  // Gris claro: Para fondos limpios y descansados a la vista
+                            dark: '#1F2937'   // Gris oscuro: Para textos legibles sin ser negro puro
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Estilos adicionales muy básicos para suavizar el comportamiento del acordeón (FAQs) -->
+    <style>
+        /* Tipografía grande y legible, mínimo 16px en móvil como se solicitó */
+        html { font-size: 16px; scroll-behavior: smooth; }
+        /* Se aplica Century Gothic como fuente principal de toda la página */
+        body { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; color: #1F2937; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-white antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN (HEADER) -->
+    <!-- ¿Por qué? Un header limpio da legitimidad a la marca desde el primer segundo. -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo / Nombre de la marca -->
+            <div class="font-bold text-2xl text-brand-blue tracking-tight">
+                GAP Investor
+            </div>
+            <!-- Indicador del producto -->
+            <div class="text-sm font-bold text-gray-900 border-l-2 border-gray-500 pl-3">
+                seedifferente
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. SECCIÓN HERO (PRINCIPAL) -->
+    <!-- ¿Por qué? Se carga la imagen publicitaria diseñada que ya incluye el titular y subtitulo.
+         Debajo, el botón de CTA directo para móviles. -->
+    <section class="bg-brand-gray py-10 md:py-16 px-6 text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            
+            <!-- Etiqueta de la oferta gratuita arriba para incentivar -->
+            <span class="inline-block bg-brand-blue text-white text-sm font-semibold px-4 py-1 rounded-full mb-6">
+                🎁 Descubre tu perfil de riesgo Gratis
+            </span>
+            
+            <!-- Imagen Adjunta del Hero -->
+            <!-- Usamos la etiqueta <img> en lugar de background para que escale perfectamente 
+                 en celulares sin recortar el texto integrado. -->
+            <div class="w-full mb-8 rounded-xl overflow-hidden shadow-2xl border border-gray-200">
+                <img src="C:\Users\josen\Downloads\Hero_BayerPersona1.png" 
+                     alt="Genera ingresos extra sin entregarle tu capital a nadie. GAP Investor." 
+                     class="w-full h-auto object-cover block">
+            </div>
+            
+            <!-- CTA Principal: Botón grande, claro y de color verde (asociado a WhatsApp) -->
+            <!-- El enlace lleva directamente a WhatsApp con el mensaje predefinido -->
+            <a href="https://wa.me/573024782828?text=Hola,%20quiero%20reservar%20mi%20asesoría%20personalizada%20gratuita%20para%20descubrir%20mi%20perfil%20de%20riesgo." 
+               target="_blank"
+               class="inline-flex items-center justify-center bg-brand-green hover:bg-green-600 text-white font-bold text-lg py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full md:w-auto mt-2">
+                <!-- Icono de WhatsApp simple en SVG -->
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766 0 1.011.263 1.996.763 2.864l-.815 2.977 3.047-.8c.844.463 1.802.707 2.771.707 3.18 0 5.766-2.585 5.768-5.766 0-3.181-2.587-5.767-5.766-5.768zm3.195 8.283c-.15.426-.87.832-1.2.876-.308.042-.716.126-2.023-.416-1.577-.652-2.582-2.261-2.658-2.363-.076-.102-.633-.843-.633-1.608 0-.766.396-1.144.536-1.291.141-.148.307-.184.41-.184.102 0 .204 0 .292.004.092.004.22-.034.343.262.126.301.429 1.05.467 1.125.039.076.064.164.013.265-.05.101-.076.164-.151.252-.075.088-.158.192-.224.264-.071.077-.145.161-.06.307.085.146.379.627.813 1.016.559.502 1.037.658 1.182.733.146.075.231.063.318-.035.088-.098.378-.44.478-.59.101-.15.201-.126.333-.076.132.05 1.036.488 1.112.526.076.038.126.057.144.088.018.031.018.175-.132.601z"/></svg>
+                Reserva tu Asesoría personalizada gratuita
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. SECCIÓN BENEFICIOS (BULLETS) -->
+    <!-- ¿Por qué? Justifica la decisión de forma lógica tras el enganche emocional del Hero. Deben ser medibles. -->
+    <section class="py-16 md:py-24 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-brand-blue text-center mb-12">¿Por qué miles eligen GAP Investor?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Beneficio 1: Accesibilidad -->
+                <div class="flex flex-col items-center text-center p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="bg-blue-100 text-brand-blue p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-2">Baja barrera de entrada</h3>
+                    <p class="text-brand-dark">Empieza a construir tu capital de forma profesional con una inversión inicial desde solo <strong>$500 USD</strong>.</p>
+                </div>
+                
+                <!-- Beneficio 2: Resultados rápidos/periódicos -->
+                <div class="flex flex-col items-center text-center p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="bg-blue-100 text-brand-blue p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-2">Liquidez Quincenal</h3>
+                    <p class="text-brand-dark">Recibe los beneficios generados cada quince días directamente en tu cuenta, <strong>sin largas esperas</strong> ni candados.</p>
+                </div>
+
+                <!-- Beneficio 3: Seguridad estadística -->
+                <div class="flex flex-col items-center text-center p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="bg-blue-100 text-brand-blue p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-2">Estrategia Probada</h3>
+                    <p class="text-brand-dark">Aprovecha un modelo estadístico testeado por más de <strong>1300 días</strong> en la bolsa de Nueva York.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN CÓMO FUNCIONA -->
+    <section class="py-16 md:py-24 px-6 bg-brand-gray">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-brand-blue text-center mb-12">¿Cómo funciona GAP Investor?</h2>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+                
+                <!-- Paso 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue text-white font-bold border-4 border-brand-gray shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">1</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl bg-white shadow-sm">
+                        <h3 class="font-bold text-xl text-brand-blue mb-1">Abre tu cuenta propia</h3>
+                        <p class="text-brand-dark">Creas una cuenta a <strong>tu nombre</strong> en un bróker regulado globalmente. Tú tienes el control absoluto de tus contraseñas y tu dinero.</p>
+                    </div>
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue text-white font-bold border-4 border-brand-gray shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">2</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl bg-white shadow-sm">
+                        <h3 class="font-bold text-xl text-brand-blue mb-1">Conectamos la tecnología</h3>
+                        <p class="text-brand-dark">Enlazamos tu cuenta a nuestro sistema automatizado de Copy Trading. <strong>Nosotros no tocamos tus fondos</strong> ni recibimos transferencias.</p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue text-white font-bold border-4 border-brand-gray shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">3</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl bg-white shadow-sm">
+                        <h3 class="font-bold text-xl text-brand-blue mb-1">Observa cómo crece</h3>
+                        <p class="text-brand-dark">Tu capital trabaja diariamente en el S&P500 mientras tú sigues en tu empleo actual. Disfruta de la magia del interés compuesto y retira cuando quieras.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN DE CONFIANZA / PRUEBA SOCIAL -->
+    <!-- ¿Por qué? Transformado en un carrusel simple para mostrar múltiples perfiles (galería).
+         Usa JavaScript ligero al final del documento para deslizar sin sobrecargar la página. -->
+    <section class="py-16 md:py-24 px-6 bg-brand-blue text-white overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative">
+            <h2 class="text-3xl font-bold mb-10">Construyendo salud financiera real</h2>
+            
+            <!-- Contenedor principal del Carrusel -->
+            <div class="relative w-full">
+                
+                <!-- Pista de los slides (se mueve horizontalmente) -->
+                <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out w-full">
+                    
+                    <!-- Slide 1: Testimonio Original -->
+                    <div class="w-full shrink-0 px-2 md:px-4">
+                        <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/20 text-left h-full flex flex-col justify-between">
+                            <div>
+                                <!-- Estrellas -->
+                                <div class="flex text-brand-green mb-4">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                                <p class="text-lg md:text-xl font-light mb-6 italic">
+                                    "Trabajo todo el día y la verdad, no tengo tiempo ni ganas de aprender gráficas de trading. Ver cómo mi cuenta crece mes a mes sin que yo tenga que operar, me da muchísima tranquilidad. Lo mejor de todo es que <strong>el dinero siempre ha estado a mi nombre</strong> en mi propia cuenta."
+                                </p>
+                            </div>
+                            <div class="flex items-center mt-4">
+                                <div class="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center text-xl font-bold mr-4 shrink-0">C</div>
+                                <div>
+                                    <p class="font-bold">Carlos M.</p>
+                                    <p class="text-sm text-gray-300">Empleado del sector comercial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Nuevo Testimonio -->
+                    <div class="w-full shrink-0 px-2 md:px-4">
+                        <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/20 text-left h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex text-brand-green mb-4">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                                <p class="text-lg md:text-xl font-light mb-6 italic">
+                                    "Estaba cansada de dejar mis ahorros quietos perdiendo valor por la inflación. Con este sistema empecé pequeño, vi resultados reales desde la primera quincena y, sobre todo, no sentí que le entregaba mi plata a un desconocido."
+                                </p>
+                            </div>
+                            <div class="flex items-center mt-4">
+                                <div class="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center text-xl font-bold mr-4 shrink-0">L</div>
+                                <div>
+                                    <p class="font-bold">Laura G.</p>
+                                    <p class="text-sm text-gray-300">Profesional Independiente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Nuevo Testimonio -->
+                    <div class="w-full shrink-0 px-2 md:px-4">
+                        <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/20 text-left h-full flex flex-col justify-between">
+                            <div>
+                                <div class="flex text-brand-green mb-4">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                </div>
+                                <p class="text-lg md:text-xl font-light mb-6 italic">
+                                    "Como ingeniero soy muy analítico. Estudié la estrategia y el modelo 50/50 me convenció porque alinea los intereses: si yo no gano, ellos tampoco. Total transparencia y control."
+                                </p>
+                            </div>
+                            <div class="flex items-center mt-4">
+                                <div class="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center text-xl font-bold mr-4 shrink-0">A</div>
+                                <div>
+                                    <p class="font-bold">Andrés F.</p>
+                                    <p class="text-sm text-gray-300">Ingeniero de Software</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controles del Carrusel -->
+                <div class="flex justify-center items-center mt-8 space-x-4">
+                    <!-- Botón Anterior -->
+                    <button id="btn-prev" class="p-2 rounded-full bg-white/20 hover:bg-white/40 transition text-white" aria-label="Anterior">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    
+                    <!-- Puntos indicadores (Dots) -->
+                    <div class="flex space-x-2" id="carousel-dots">
+                        <button class="w-3 h-3 rounded-full bg-white transition" aria-label="Slide 1"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/40 transition" aria-label="Slide 2"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/40 transition" aria-label="Slide 3"></button>
+                    </div>
+                    
+                    <!-- Botón Siguiente -->
+                    <button id="btn-next" class="p-2 rounded-full bg-white/20 hover:bg-white/40 transition text-white" aria-label="Siguiente">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN FAQs (PREGUNTAS FRECUENTES) -->
+    <!-- ¿Por qué? Aquí resolvemos las top 3 objeciones directamente. 
+         Se usa HTML nativo (<details> y <summary>) para evitar cargar JavaScript innecesario. -->
+    <section class="py-16 md:py-24 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-brand-blue text-center mb-10">Respuestas claras, sin letras pequeñas</h2>
+            
+            <div class="space-y-4">
+                
+                <!-- Objeción 1: ¿Y si pierdo mi plata? -->
+                <details class="group border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden bg-brand-gray cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg text-brand-blue">
+                        ¿Y si pierdo mi plata?
+                        <span class="transition group-open:rotate-180 text-brand-green">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-brand-dark mt-4 leading-relaxed">
+                        Tú defines tus propios límites de riesgo. Antes de iniciar, personalizamos la estrategia mediante una asesoría para asegurar que tu capital esté protegido dentro de los márgenes que tú apruebes. Contamos con tecnología que garantiza no superar los topes diarios y máximos preestablecidos. Nunca arriesgamos más de lo acordado.
+                    </p>
+                </details>
+
+                <!-- Objeción 2: ¿Cómo sé que no es una estafa más? -->
+                <details class="group border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden bg-brand-gray cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg text-brand-blue">
+                        ¿Cómo sé que no es una estafa más?
+                        <span class="transition group-open:rotate-180 text-brand-green">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-brand-dark mt-4 leading-relaxed">
+                        A diferencia de los esquemas fraudulentos, aquí <strong>nunca nos transfieres tu dinero</strong>. Tú abres tu propia cuenta a tu nombre en VT Markets (un bróker australiano con más de 8 años en el mercado y fuertemente regulado globalmente). Nosotros solo conectamos el software para operar. Tú mantienes el 100% del control para fondear o retirar en cualquier momento.
+                    </p>
+                </details>
+
+                <!-- Objeción 3: ¿Y si el rendimiento no es como lo prometen? -->
+                <details class="group border border-gray-200 rounded-lg p-6 [&_summary::-webkit-details-marker]:hidden bg-brand-gray cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-lg text-brand-blue">
+                        ¿Y si el rendimiento no es como lo prometen?
+                        <span class="transition group-open:rotate-180 text-brand-green">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="text-brand-dark mt-4 leading-relaxed">
+                        No vendemos promesas mágicas, nos basamos en un modelo matemático probado durante más de 1300 días operativos. Además, nuestro esquema es <strong>50/50 sobre utilidades</strong>. Esto significa que nosotros solo ganamos si tú ganas dinero. Es más, en periodos de rentabilidad negativa, nuestro equipo asume los costos operativos. Nuestro éxito depende enteramente de que a ti te vaya bien.
+                    </p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECCIÓN CTA FINAL -->
+    <!-- ¿Por qué? Después de resolver dudas, es el momento exacto para invitar a la acción sin distracciones. -->
+    <section class="py-16 md:py-24 px-6 bg-brand-gray border-t border-gray-200 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-brand-blue mb-6">¿Listo para dejar de depender únicamente de tu sueldo?</h2>
+            <p class="text-lg text-brand-dark mb-10">Agenda hoy una llamada sin compromiso. Analizaremos tu situación y te mostraremos exactamente cómo funcionaría GAP Investor para tu caso específico.</p>
+            
+            <!-- Botón CTA igual al de arriba para mantener consistencia -->
+            <a href="https://wa.me/573024782828?text=Hola,%20quiero%20reservar%20mi%20asesoría%20personalizada%20gratuita%20para%20descubrir%20mi%20perfil%20de%20riesgo." 
+               target="_blank"
+               class="inline-flex items-center justify-center bg-brand-green hover:bg-green-600 text-white font-bold text-lg py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full md:w-auto">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766 0 1.011.263 1.996.763 2.864l-.815 2.977 3.047-.8c.844.463 1.802.707 2.771.707 3.18 0 5.766-2.585 5.768-5.766 0-3.181-2.587-5.767-5.766-5.768zm3.195 8.283c-.15.426-.87.832-1.2.876-.308.042-.716.126-2.023-.416-1.577-.652-2.582-2.261-2.658-2.363-.076-.102-.633-.843-.633-1.608 0-.766.396-1.144.536-1.291.141-.148.307-.184.41-.184.102 0 .204 0 .292.004.092.004.22-.034.343.262.126.301.429 1.05.467 1.125.039.076.064.164.013.265-.05.101-.076.164-.151.252-.075.088-.158.192-.224.264-.071.077-.145.161-.06.307.085.146.379.627.813 1.016.559.502 1.037.658 1.182.733.146.075.231.063.318-.035.088-.098.378-.44.478-.59.101-.15.201-.126.333-.076.132.05 1.036.488 1.112.526.076.038.126.057.144.088.018.031.018.175-.132.601z"/></svg>
+                Reserva tu Asesoría personalizada gratuita
+            </a>
+            <p class="text-sm text-gray-500 mt-4">La asesoría por WhatsApp es 100% gratuita y sin compromiso.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER SIMPLE -->
+    <footer class="bg-brand-blue py-8 px-6 border-t border-blue-800 text-center text-sm text-blue-200">
+        <div class="max-w-5xl mx-auto flex flex-col items-center">
+            <div class="font-bold text-xl text-white mb-2 tracking-tight">seedifferente</div>
+            <p>© 2026 GAP Investor. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- LÓGICA DEL CARRUSEL (JavaScript Sencillo) -->
+    <!-- ¿Por qué? Agrega funcionalidad interactiva sin depender de librerías grandes como Swiper o jQuery. -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('carousel-track');
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+            const dots = document.querySelectorAll('#carousel-dots button');
+            
+            let currentIndex = 0;
+            const totalSlides = dots.length;
+            let autoPlayInterval;
+
+            // Función principal para mover el carrusel
+            const updateCarousel = (index) => {
+                currentIndex = index;
+                // Mueve la pista usando porcentajes
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Actualiza el color de los puntitos
+                dots.forEach((dot, i) => {
+                    if (i === currentIndex) {
+                        dot.classList.remove('bg-white/40');
+                        dot.classList.add('bg-white');
+                    } else {
+                        dot.classList.remove('bg-white');
+                        dot.classList.add('bg-white/40');
+                    }
+                });
+            };
+
+            // Evento Botón Siguiente
+            const nextSlide = () => {
+                let nextIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel(nextIndex);
+                resetAutoPlay();
+            };
+
+            // Evento Botón Anterior
+            const prevSlide = () => {
+                let prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel(prevIndex);
+                resetAutoPlay();
+            };
+
+            btnNext.addEventListener('click', nextSlide);
+            btnPrev.addEventListener('click', prevSlide);
+
+            // Eventos para los puntitos (Dots)
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateCarousel(index);
+                    resetAutoPlay();
+                });
+            });
+
+            // Auto-play cada 6 segundos
+            const startAutoPlay = () => {
+                autoPlayInterval = setInterval(nextSlide, 6000);
+            };
+
+            const resetAutoPlay = () => {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            };
+
+            // Iniciar carrusel
+            startAutoPlay();
+        });
+    </script>
+
+</body>
+</html>
