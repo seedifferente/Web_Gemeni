@@ -273,11 +273,13 @@
                 <div class="text-center">
                     <h3 class="text-3xl md:text-4xl font-bold text-brand-green mb-2">+1300</h3>
                     <p class="text-blue-100">días analizados</p>
+                    <a href="https://seedifferente.com/gapinvestor/dashboard/" target="_blank" class="inline-block mt-2 text-sm text-white/80 hover:text-brand-green underline underline-offset-4 transition-colors">Ver Dashboard</a>
                 </div>
                 <!-- Columna 4 -->
                 <div class="text-center">
                     <h3 class="text-3xl md:text-4xl font-bold text-brand-green mb-2">+1 año</h3>
                     <p class="text-blue-100">de cuenta auditada</p>
+                    <a href="https://socialrating.vtmarkets-vtrade.com/widgets/ratings/8652?widgetKey=public1" target="_blank" class="inline-block mt-2 text-sm text-white/80 hover:text-brand-green underline underline-offset-4 transition-colors">Ver Copy Trading</a>
                 </div>
             </div>
         </div>
